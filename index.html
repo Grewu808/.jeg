@@ -1,62 +1,49 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="ro" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <title>.jeg</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      color: #fff;
-      height: 100%;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .wrap {
-      text-align: center;
-      padding: 40px;
-    }
-
-    .logo {
-      max-width: 240px;
-      margin-bottom: 40px;
-    }
-
-    .text {
-      font-size: 18px;
-      letter-spacing: 1px;
-      opacity: 0.85;
-    }
-
-    .link {
-      display: inline-block;
-      margin-top: 30px;
-      color: #fff;
-      text-decoration: none;
-      border-bottom: 1px solid #fff;
-      padding-bottom: 4px;
-    }
-
-    .link:hover {
-      opacity: 0.6;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <img src="D22BBE16-34AD-460E-9BE2-D2D992B64580.png" alt=".jeg logo" class="logo">
-    <div class="text">
-      no culture. no hype. just clothes.
+
+<div class="wrapper">
+  <nav>
+    <div class="brand">.jeg</div>
+    <a href="shop.html" class="active">shop</a>
+    <a href="#">orders</a>
+    <a href="#">info</a>
+  </nav>
+
+  <main>
+    <div class="products">
+      <div class="product">
+        <img src="produs1.png">
+        <h3>NOTHING</h3>
+        <div class="price">99 RON</div>
+        <a class="order" href="#">order</a>
+      </div>
+
+      <div class="product">
+        <img src="produs2.png">
+        <h3>RATED S FOR SARCASM</h3>
+        <div class="price">99 RON</div>
+        <a class="order" href="#">order</a>
+      </div>
+
+      <div class="product">
+        <img src="produs3.png">
+        <h3>SHOT</h3>
+        <div class="price">99 RON</div>
+        <a class="order" href="#">order</a>
+      </div>
     </div>
-    <a href="#" class="link">soon</a>
-  </div>
+  </main>
+</div>
+
+<button class="toggle">◯</button>
+
+<script src="theme.js"></script>
 </body>
 </html>
