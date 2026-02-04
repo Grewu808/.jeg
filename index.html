@@ -11,7 +11,7 @@
 <div class="wrapper">
   <nav>
     <div class="brand">.jeg</div>
-    <a href="shop.html" class="active">shop</a>
+    <a href="index.html" class="active">shop</a>
     <a href="#">orders</a>
     <a href="#">info</a>
   </nav>
@@ -19,21 +19,21 @@
   <main>
     <div class="products">
       <div class="product">
-        <img src="produs1.png">
+        <img src="produs1.png" alt="NOTHING">
         <h3>NOTHING</h3>
         <div class="price">99 RON</div>
         <a class="order" href="#">order</a>
       </div>
 
       <div class="product">
-        <img src="produs2.png">
+        <img src="produs2.png" alt="RATED S FOR SARCASM">
         <h3>RATED S FOR SARCASM</h3>
         <div class="price">99 RON</div>
         <a class="order" href="#">order</a>
       </div>
 
       <div class="product">
-        <img src="produs3.png">
+        <img src="produs3.png" alt="SHOT">
         <h3>SHOT</h3>
         <div class="price">99 RON</div>
         <a class="order" href="#">order</a>
@@ -42,7 +42,9 @@
   </main>
 </div>
 
-<button class="toggle">◯</button>
+<button class="toggle" aria-label="theme toggle">
+  <span class="bulb"></span>
+</button>
 
 <script src="theme.js"></script>
 </body>
