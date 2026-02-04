@@ -25,54 +25,14 @@ a {
   text-decoration: none;
 }
 
-/* LANDING */
-
-.landing {
-  background: #000;
-}
-
-.landing-wrap {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: fadein 2s ease forwards;
-}
-
-.landing-logo {
-  max-width: 300px;
-  margin-bottom: 30px;
-  opacity: 0;
-  animation: logoFade 2s ease forwards;
-}
-
-.enter {
-  font-size: 16px;
-  letter-spacing: 2px;
-  border-bottom: 1px solid #fff;
-  color: #fff;
-  opacity: 0;
-  animation: textFade 2s ease forwards;
-  animation-delay: 1.2s;
-}
-
-@keyframes logoFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes textFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* SHOP */
+/* LAYOUT */
 
 .wrapper {
   display: flex;
   min-height: 100vh;
 }
+
+/* MENIU STANGA */
 
 nav {
   width: 180px;
@@ -85,15 +45,17 @@ nav {
 }
 
 nav a {
-  display: block;
+  display: inline-block;
   margin-bottom: 16px;
   font-size: 14px;
+  padding-bottom: 2px;
 }
 
 nav a.active {
-  border-bottom: 1px solid var(--line);
-  width: fit-content;
+  border-bottom: 1px solid currentColor;
 }
+
+/* CONTINUT */
 
 main {
   flex: 1;
@@ -123,32 +85,32 @@ main {
 .order {
   display: inline-block;
   margin-top: 10px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid currentColor;
 }
 
-/* TOGGLE */
+/* TOGGLE LUMINA */
 
 .toggle {
   position: fixed;
-  bottom: 30px;
-  left: 30px;
+  bottom: 24px;
+  left: 24px;
   width: 46px;
   height: 46px;
-  border: 1px solid var(--line);
+  border: 1px solid currentColor;
   border-radius: 50%;
-  background: none;
+  background: var(--bg);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 10000;
 }
 
 .bulb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid var(--line);
+  border: 2px solid currentColor;
   position: relative;
 }
 
@@ -159,7 +121,7 @@ main {
   left: 50%;
   width: 6px;
   height: 4px;
-  background: var(--line);
+  background: currentColor;
   transform: translateX(-50%);
 }
 
