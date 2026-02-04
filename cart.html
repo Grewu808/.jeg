@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>.jeg cos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <nav>
+    <div class="brand">.jeg</div>
+    <a href="shop.html">produse</a>
+    <a href="cart.html" class="active">cos</a>
+    <a href="mesaj.html">mesajul tau</a>
+    <a href="#">info</a>
+  </nav>
+
+  <main>
+    <h2>cosul tau</h2>
+    <div id="cartItems"></div>
+  </main>
+</div>
+
+<button class="toggle"><span class="bulb"></span></button>
+
+<script src="theme.js"></script>
+<script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || []
+  const box = document.getElementById("cartItems")
+
+  if (cart.length === 0) {
+    box.innerHTML = "cosul e gol"
+  } else {
+    cart.forEach((item, i) => {
+      const div = document.createElement("div")
+      div.innerHTML = item + " <a href='#'>sterge</a>"
+      div.querySelector("a").onclick = () => {
+        cart.splice(i, 1)
+        localStorage.setItem("cart", JSON.stringify(cart))
+        location.reload()
+      }
+      box.appendChild(div)
+    })
+  }
+</script>
+
+</body>
+</html>
