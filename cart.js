@@ -1,6 +1,7 @@
-function addToCart(name) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || []
-  cart.push(name)
-  localStorage.setItem("cart", JSON.stringify(cart))
-  alert(name + " adaugat in cos")
-}
+<nav>
+  <div class="brand">.jeg</div>
+  <a href="shop.html">produse</a>
+  <a href="cart.html" class="active">cos</a>
+  <a href="mesaj.html">mesajul tau</a>
+  <a href="#">info</a>
+</nav>
