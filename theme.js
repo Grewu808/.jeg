@@ -1,7 +1,17 @@
-const button = document.querySelector(".toggle")
 const root = document.documentElement
+const button = document.querySelector(".toggle")
 
-button.onclick = () => {
-  const mode = root.getAttribute("data-theme")
-  root.setAttribute("data-theme", mode === "dark" ? "light" : "dark")
+const savedTheme = localStorage.getItem("theme")
+if (savedTheme) {
+  root.setAttribute("data-theme", savedTheme)
+} else {
+  root.setAttribute("data-theme", "dark")
+  localStorage.setItem("theme", "dark")
 }
+
+button.addEventListener("click", () => {
+  const current = root.getAttribute("data-theme")
+  const next = current === "dark" ? "light" : "dark"
+  root.setAttribute("data-theme", next)
+  localStorage.setItem("theme", next)
+})
