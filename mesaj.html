@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>.jeg mesaj</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <nav>
+    <div class="brand">.jeg</div>
+    <a href="shop.html">produse</a>
+    <a href="cart.html">cos</a>
+    <a href="mesaj.html" class="active">mesajul tau</a>
+    <a href="#">info</a>
+  </nav>
+
+  <main>
+    <h2>scrie mesajul tau</h2>
+    <textarea id="msg" rows="6" style="width:100%"></textarea><br><br>
+    <button onclick="saveMsg()">salveaza</button>
+  </main>
+</div>
+
+<button class="toggle"><span class="bulb"></span></button>
+
+<script src="theme.js"></script>
+<script>
+  const box = document.getElementById("msg")
+  box.value = localStorage.getItem("customMsg") || ""
+
+  function saveMsg() {
+    localStorage.setItem("customMsg", box.value)
+    alert("mesaj salvat")
+  }
+</script>
+
+</body>
+</html>
